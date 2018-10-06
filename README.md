@@ -14,17 +14,17 @@ files and certificates.
 
 ```
 sudo \
-CERTBOT_DOMAIN=example.com \
-CERTBOT_AWS_PROFILE=default \
-CERTBOT_AWS_REGION=us-east-1 \
+MY_CERTBOT_DOMAIN=example.com \
+MY_CERTBOT_AWS_PROFILE=default \
+MY_CERTBOT_AWS_REGION=us-east-1 \
 ./certbot.sh
 ```
 
-**CERTBOT_DOMAIN** Your domain name (the script will automatically add a www subdomain as well)
+**MY_CERTBOT_DOMAIN** Your domain name (the script will automatically add a www subdomain as well)
 
-**CERTBOT_AWS_PROFILE** The AWS CLI profile (in `~/.aws/credentials`) used for uploading HTTP challenge files to S3 and importing certificates into Certificate Manager (make sure it's authorized to do those things)
+**MY_CERTBOT_AWS_PROFILE** The AWS CLI profile (in `~/.aws/credentials`) used for uploading HTTP challenge files to S3 and importing certificates into Certificate Manager (make sure it's authorized to do those things)
 
-**CERTBOT_AWS_REGION** The AWS region associated with Certificate Manager
+**MY_CERTBOT_AWS_REGION** The AWS region associated with Certificate Manager
 
 Then go to your CloudFront distribution and apply the certificate (custom SSL certificate).
 
